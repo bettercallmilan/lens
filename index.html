@@ -29,7 +29,12 @@
     </div>
 
     <h1 id="main-text">Milan's Lens</h1>
-    <h2 id="h2">Capturing Moments, One Click at a Time</h2>
+    <h2 id="h2">capturing moments, one click at a time</h2>
+
+    <div class="scroll-down"></div>
+
+    <div id="custom-break2"></div>
+    
     <p id="aux-text">
         Welcome to Milan's Lens, where photography meets passion and storytelling. Through my lens, I capture the
         essence of landscapes, sunsets, and moments that resonate with emotion and beauty. Every click of the shutter is
@@ -75,6 +80,14 @@
         document.getElementById('upbutton').addEventListener('click', function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        var scrollDown = document.querySelector('.scroll-down');
+        scrollDown.addEventListener('click', function() {
+        var auxText = document.getElementById('aux-text');
+        auxText.scrollIntoView({ behavior: 'smooth' });
+    });
+});
     </script>
 
 </body>

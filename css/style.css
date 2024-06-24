@@ -14,8 +14,11 @@ body {
     background-position: center;
     background-attachment: fixed;
     margin: 0;
-    padding: 0;
-    padding-bottom: 60px;
+    padding: 0;    
+}
+
+::selection {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 ::-webkit-scrollbar {
@@ -52,7 +55,7 @@ header {
     position: absolute;
     right: 0;
     right: 10px;
-    top: 1%;
+    top: .75%;
 }
 
 .navbar-container {
@@ -61,6 +64,7 @@ header {
     background-color: var(--feldgrau);
     box-sizing: border-box;
     padding: 10px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 } /* whole navbar container */
 
 .navbar {
@@ -107,17 +111,18 @@ header {
 
 #main-text {
     text-align: center;
-    font-size: 80px;
+    font-size: 90px;
     color: var(--platinum);
     margin-bottom: 10px;
+    margin-top: 240px;
 }
 
 #h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
     color: var(--timberwolf);
     margin-top: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 20vh;
 }
 
 #aux-text {
@@ -127,12 +132,23 @@ header {
     color: white;
 }
 
+#in-development {
+    text-align: center;
+    font-size: 17px;
+    color: red;
+    margin-top: 30px;
+}
+
 #custom-break {
-    height: 80px;
+    height: 100px;
 }
 
 #custom-break1 {
     height: 19px;
+}
+
+#custom-break2 {
+    height: 330px;
 }
 
 #quote1 {
@@ -150,6 +166,7 @@ header {
     color: white;
     background-color: rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    margin-bottom: 120px;
 }
 
 .aside {
@@ -249,4 +266,49 @@ header {
     .navbar-links.active {
         display: flex;
     }
+}
+
+.scroll-down:before,
+.scroll-down:after {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	transform: rotate(45deg);
+	border-bottom: 4px solid white;
+	border-right: 4px solid white;
+    margin: 0 auto;
+    cursor: pointer;
+
+}
+
+.scroll-down:before {
+    animation: down-arrow-before 2.6s ease-in-out infinite;
+}
+
+.scroll-down:after {
+	animation: down-arrow-after 2.6s ease-in-out infinite;
+}
+
+@keyframes down-arrow-before {
+	50% {
+		transform: rotate(45deg) translate(70%, 70%);
+	}
+	100% {
+		transform: rotate(45deg) translate(70%, 70%);
+	}
+}
+
+@keyframes down-arrow-after {
+	50% {
+		transform: rotate(45deg) translate(110%, 110%);
+		opacity: 0;
+	}
+	51% {
+		transform: rotate(45deg) translate(-130%, -130%);
+	}
+	100% {
+		transform: rotate(45deg) translate(-70%, -70%);
+		opacity: 1;
+	}
 }
