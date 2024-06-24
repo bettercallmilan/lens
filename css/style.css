@@ -121,8 +121,10 @@ header {
     text-align: center;
     font-size: 26px;
     color: var(--timberwolf);
-    margin-top: 10px;
+    margin-top: 12px;
     margin-bottom: 20vh;
+    font-weight: normal;
+    font-style: italic;
 }
 
 #aux-text {
