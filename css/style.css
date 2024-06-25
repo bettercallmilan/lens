@@ -327,6 +327,53 @@ header {
     text-decoration: underline;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 30px;
+    padding-bottom: 80px;
+    margin-top: 225px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.gallery-item:hover img {
+    filter: brightness(60%);
+}
+
+.gallery-item:hover .image-title {
+    opacity: 1;
+}
+
+.image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--platinum);
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 @media (max-width: 768px) {
     #mainpageaside {
         width: 80%;
