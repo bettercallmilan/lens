@@ -29,7 +29,7 @@
     </div>
 
     <main>
-        <h1 id="submain-text">Portfolio</h1>
+        <h1 class="submain-text">Portfolio</h1>
 
         <p id="in-development">
             This page is still in development. Check later for updates.</p>
@@ -50,6 +50,10 @@
         document.getElementById('navbar-toggle').addEventListener('click', function () {
             var navbarLinks = document.getElementById('navbar-links');
             navbarLinks.classList.toggle('active');
+        });
+
+        document.getElementById('upbutton').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 

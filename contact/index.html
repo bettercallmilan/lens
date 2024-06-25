@@ -29,15 +29,43 @@
     </div>
 
     <main>
-        <h1 id="submain-text">Contact</h1>
+        <h1 class="submain-text" id="contact-text">Contact</h1>
 
-        <p id="in-development">
-            This page is still in development. Check later for updates.</p>
+        <p class="aux-text" id="aux-text1">If you have any questions, feedback, or collaboration inquiries, feel free to
+            reach out to me. I'm always excited to connect with fellow photographers, art enthusiasts, and potential
+            clients. You can contact me via email or social media, and I'll get back to you as soon as possible.</p>
+        <br>
+        <br>
+        <p class="aux-text">For any questions related to my photography, please provide as much detail as possible so
+            that I can provide you with the best possible answer. I'll try my best to reach out to you in the shortest
+            time possible.</p>
+        <br>
+        <br>
+        <p class="aux-text">If you're interested in collaborating on a photography project or have any creative ideas
+            you'd like to discuss, I'd love to hear from you. I'd love to work together to bring our visions to life and
+            create something truly unique.</p>
+        <br>
+        <br>
+        <p class="aux-text">I'm also open to discussing opportunities for exhibiting my work or participating in
+            photography events. If you have any proposals or suggestions, please don't hesitate to get in touch.</p>
     </main>
 
     <aside class="aside">
-        <p>quote</p>
+        <p class="quote" id="quote1">“Essentially what photography is is life lit up.”</p>
+        <p>- Sam Abell</p>
     </aside>
+
+    <div class="contact-container">
+        <div class="contact-png">
+            <img src="../images/contact.png" alt="Contact">
+        </div>
+        <div class="contact-info">
+            <p>Email:</p>
+            <a href="mailto:contact@jankovic.tech" target="_blank">contact@jankovic.tech</a>
+            <p>Instagram:</p>
+            <a href="https://instagram.com/milantakespics" target="_blank">@milantakespics</a>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -50,6 +78,10 @@
         document.getElementById('navbar-toggle').addEventListener('click', function () {
             var navbarLinks = document.getElementById('navbar-links');
             navbarLinks.classList.toggle('active');
+        });
+
+        document.getElementById('upbutton').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 

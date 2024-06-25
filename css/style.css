@@ -122,12 +122,16 @@ header {
     margin-top: 240px;
 }
 
-#submain-text {
+.submain-text {
     text-align: center;
     font-size: 70px;
     color: var(--platinum);
     margin-bottom: 10px;
     margin-top: 170px;
+}
+
+#contact-text {
+    margin-top: 50px;
 }
 
 #h2 {
@@ -175,7 +179,7 @@ header {
 }
 
 #custom-break3 {
-    height: 90px;
+    height: 240px;
 }
 
 .quote {
@@ -288,6 +292,41 @@ header {
     color: var(--platinum)
 }
 
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-top: 1px solid white;
+    margin-top: 40px;
+}
+
+.contact-png {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding-right: 20px; 
+    border-right: 1px solid #ccc;
+}
+
+.contact-png img {
+    width: 60%;
+}
+
+.contact-info p, .contact-info a {
+    font-size: 16px;
+    padding-left: 50px;
+    color: var(--platinum);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     #mainpageaside {
         width: 80%;
@@ -303,9 +342,13 @@ header {
         font-size: 70px;
     }
 
-    #submain-text {
+    .submain-text {
         margin-top: 70px;
         font-size: 70px;
+    }
+
+    #custom-break3 {
+        height: 120px;
     }
 
     #h2 {
@@ -382,6 +425,11 @@ header {
     .equipment-info h2, .equipment-info p {
         margin: 5px 0;
         text-align: center;
+    }
+
+    .contact-container {
+        margin-top: 100px;
+        margin-bottom: 65px;
     }
 }
 
