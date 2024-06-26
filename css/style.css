@@ -1,3 +1,5 @@
+/* start: general styles */
+
 * {
     --platinum: #e6e8e6ff;
     --timberwolf: #ced0ceff;
@@ -14,7 +16,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 .subpage-body {
@@ -41,6 +43,34 @@ body {
     background-color: var(--platinum);
 }
 
+#custom-break {
+    height: 100px;
+}
+
+#custom-break1 {
+    height: 19px;
+}
+
+#custom-break2 {
+    height: 330px;
+}
+
+#custom-break3 {
+    height: 240px;
+}
+
+#in-development {
+    text-align: center;
+    font-size: 17px;
+    color: red;
+    margin-top: 30px;
+}
+
+/* end: general styles */
+
+
+/* start: header */
+
 header {
     color: rgb(10, 10, 10);
     width: 100%;
@@ -63,6 +93,11 @@ header {
     top: .75%;
 }
 
+/* end: header */
+
+
+/* start: navbar */
+
 .navbar-container {
     white-space: nowrap;
     width: 100%;
@@ -70,7 +105,7 @@ header {
     box-sizing: border-box;
     padding: 10px 0;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-} /* whole navbar container */
+}
 
 .navbar {
     display: flex;
@@ -79,14 +114,14 @@ header {
     margin: 0;
     padding: 0;
     align-items: center;
-} /* whole navbar */
+}
 
 .navbar a {
     display: inline-block;
     padding: 22px 60px;
     text-decoration: none;
     color: #ffffff;
-} /* single box */
+}
 
 .navbar a:hover {
     text-decoration: underline;
@@ -101,18 +136,23 @@ header {
     cursor: pointer;
     padding: 10px;
     margin-left: 10px;
-} /* hamburger menu */
+}
 
 .navbar-links {
     display: none;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-} /* navbar links in hamburger menu */
+}
 
 .active {
     font-weight: bold;
 } 
+
+/* end: navbar */
+
+
+/* start: main content (across all pages) */
 
 #main-text {
     text-align: center;
@@ -128,10 +168,6 @@ header {
     color: var(--platinum);
     margin-bottom: 10px;
     margin-top: 170px;
-}
-
-#contact-text {
-    margin-top: 50px;
 }
 
 #h2 {
@@ -159,36 +195,10 @@ header {
     padding-top: 50px;
 }
 
-#in-development {
-    text-align: center;
-    font-size: 17px;
-    color: red;
-    margin-top: 30px;
-}
+/* end: main content (across all pages) */
 
-#custom-break {
-    height: 100px;
-}
 
-#custom-break1 {
-    height: 19px;
-}
-
-#custom-break2 {
-    height: 330px;
-}
-
-#custom-break3 {
-    height: 240px;
-}
-
-.quote {
-    font-weight: bold;
-}
-
-#quote1 {
-
-}
+/* start: aside */
 
 #mainpageaside {
     width: 40%;
@@ -224,6 +234,15 @@ header {
     flex-direction: column;
 }
 
+.quote {
+    font-weight: bold;
+}
+
+/* end: aside */
+
+
+/* start: footer */
+
 .footer-container {
     background-color: var(--feldgrau);
     color: rgb(10, 10, 10);
@@ -249,6 +268,11 @@ header {
     bottom: 7px;
     cursor: pointer;
 }
+
+/* end: footer */
+
+
+/* start: equipment page */
 
 .equipment-container {
     display: flex;
@@ -294,6 +318,11 @@ header {
     color: var(--platinum)
 }
 
+/* end: equipment page */
+
+
+/* start: contact page */
+
 .contact-container {
     display: flex;
     justify-content: center;
@@ -328,6 +357,15 @@ header {
 .contact-info a:hover {
     text-decoration: underline;
 }
+
+#contact-text {
+    margin-top: 50px;
+}
+
+/* end: contact page */
+
+
+/* start: portfolio page */
 
 .gallery {
     display: grid;
@@ -376,6 +414,11 @@ header {
     transition: opacity 0.3s ease;
 }
 
+/* end: portfolio page */
+
+
+/* start: about me page */
+
 .aboutme-container {
     display: flex;
     justify-content: center;
@@ -391,7 +434,24 @@ header {
     margin-bottom: 50px;
 }
 
+/* end: about me page */
+
+
+/* start: media queries */
+
 @media (max-width: 768px) {
+
+    /* start: general styles */
+
+    #custom-break3 {
+        height: 120px;
+    }
+
+    /* end: general styles */
+
+
+    /* start: main content (across all pages) */
+
     #mainpageaside {
         width: 80%;
         float: none;
@@ -411,13 +471,13 @@ header {
         font-size: 70px;
     }
 
-    #custom-break3 {
-        height: 120px;
-    }
-
     #h2 {
         font-size: 23px;
     }
+
+    /* end: main content (across all pages) */
+
+    /* start: aside */
 
     .aside {
         width: 85%;
@@ -428,6 +488,15 @@ header {
         margin-top: 100px;
         margin-bottom: 40px;
     }
+
+    #quote1 {
+        margin-top: 0;
+    }
+
+    /* end: aside */
+
+
+    /* start: navbar */
 
     .navbar {
         flex-direction: column;
@@ -461,11 +530,10 @@ header {
         display: flex;
     }
 
-    #quote1 {
-        margin-top: 0;
-    }
+    /* end: navbar */
 
-    /* equipment page */
+
+    /* start: equipment page */
 
     .equipment-card {
         flex-direction: column;
@@ -491,11 +559,24 @@ header {
         text-align: center;
     }
 
+    /* end: equipment page */
+
+
+    /* start: contact page */
+
     .contact-container {
         margin-top: 100px;
         margin-bottom: 65px;
     }
+
+    /* end: contact page */
+
 }
+
+/* end: media queries */
+
+
+/* start: animations */
 
 .scroll-down:before,
 .scroll-down:after {
@@ -541,3 +622,5 @@ header {
 		opacity: 1;
 	}
 }
+
+/* end: animations */
