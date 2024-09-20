@@ -10,6 +10,7 @@
 
 body {
     font-family: helvetica, sans-serif;
+    background-color: black;
     background-image: url('../images/sunset.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +21,7 @@ body {
 }
 
 .subpage-body {
+    background-color: black;
     background-image: url('../images/pexels-andrew-3178786.jpg');
 }
 
