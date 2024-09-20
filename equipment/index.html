@@ -13,10 +13,6 @@
 </head>
 
 <body class="subpage-body">
-    <header>
-        <img id="logo" src="../images/logo_transparent.png" alt="Logo">
-        <div class="milanslens">Milan's Lens</div>
-    </header>
     <div class="navbar-container">
         <nav class="navbar">
             <button class="navbar-toggle" id="navbar-toggle">
@@ -33,35 +29,10 @@
     </div>
 
     <main>
-        <h1 class="submain-text">Equipment</h1>
-
-        <p class="aux-text" id="aux-text1">Welcome to the equipment page, where I showcase the tools that help bring my
-            photography to
-            life. My camera is the cornerstone of my work, providing the versatility and control I need to capture
-            stunning images. Alongside my camera, I use a variety of lenses to explore different perspectives and
-            techniques. My phone also plays a crucial role, allowing me to take spontaneous shots when I'm on the go.
-        </p>
-        <br>
-        <br>
-        <p class="aux-text">A reliable tripod is another essential part of my gear, ensuring stability for those perfect
-            long exposures
-            and detailed compositions. Each piece of equipment is carefully chosen to support my creative vision and
-            enhance my ability to capture the world around me. On this page, you'll find more detailed information about
-            the specific tools I use. Whether it's a breathtaking landscape or an intimate close-up, the right equipment
-            helps me achieve the quality and style I aim for in every shot.</p>
-
-        <br>
-        <br>
-        <br>
-
+        <h1 id="main-text">Equipment</h1>
+        <h2 id="h2">about my gear</h2>
         <div class="scroll-down"></div>
-
     </main>
-
-    <aside class="aside">
-        <p class="quote">“The earth is art, the photographer is only a witness.”</p>
-        <p>- Yann Arthus-Bertrand</p>
-    </aside>
 
     <div id="custom-break3"></div>
 
@@ -113,21 +84,10 @@
 
     <div id="custom-break"></div>
 
-    <footer>
-        <div class="footer-container">
-            <p>Jankovic Milan © 2024</p>
-            <img id="upbutton" src="../images/up.png" alt="Up Button">
-        </div>
-    </footer>
-
     <script>
         document.getElementById('navbar-toggle').addEventListener('click', function () {
             var navbarLinks = document.getElementById('navbar-links');
             navbarLinks.classList.toggle('active');
-        });
-
-        document.getElementById('upbutton').addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         document.addEventListener('DOMContentLoaded', function () {

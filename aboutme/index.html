@@ -13,10 +13,6 @@
 </head>
 
 <body class="subpage-body">
-    <header>
-        <img id="logo" src="../images/logo_transparent.png" alt="Logo">
-        <div class="milanslens">Milan's Lens</div>
-    </header>
     <div class="navbar-container">
         <nav class="navbar">
             <button class="navbar-toggle" id="navbar-toggle">
@@ -33,60 +29,22 @@
     </div>
 
     <main>
-        <h1 class="submain-text" id="contact-text">About me</h1>
-
-        <p class="aux-text" id="aux-text1">About me: I'm Milan Jankovic, a passionate
-            photographer based in Switzerland. Photography has been my creative outlet for the past 4 years,
-            allowing me to capture the beauty of landscapes, sunsets, and other mesmerizing moments that inspire me.
-        </p>
-        <br>
-        <br>
-        <p class="aux-text">Growing up, I developed a deep appreciation for
-            visual storytelling through photography. My journey began with an old phone's camera, and since then, I've
-            been dedicated to honing my skills and exploring different techniques to convey emotions and narratives
-            through my lens.</p>
-        <br>
-        <br>
-        <p class="aux-text">Beyond photography, I find joy in programming and video games. Sometimes I also play badminton. This diverse 
-            set of interests fuels my creativity and provides unique perspectives that influence my photographic style. My goal is always 
-            to evoke emotions and create lasting impressions through each photograph.</p>
-        <br>
-        <br>
-        <br>
+        <h1 id="main-text">About me</h1>
+        <h2 id="h2">myself</h2>
     </main>
 
-    <aside class="aside">
-        <p class="quote">“The camera sees more than the eye, so why not make use of it?”</p>
-        <p>- Edward Weston</p>
-    </aside>
-
-    <div class="aboutme-container">
-        <img src="../images/aboutme.jpg" alt="About me: Landscape picture with text">
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <p>Jankovic Milan © 2024</p>
-            <img id="upbutton" src="../images/up.png" alt="Up Button">
+    <div class="contact-container">
+        <div class="contact-info">
+            <p>Milan</p>
+            <p>18</p>
+            <p>🇨🇭</p>
         </div>
-    </footer>
+    </div>
 
     <script>
         document.getElementById('navbar-toggle').addEventListener('click', function () {
             var navbarLinks = document.getElementById('navbar-links');
             navbarLinks.classList.toggle('active');
-        });
-
-        document.getElementById('upbutton').addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var scrollDown = document.querySelector('.scroll-down');
-            scrollDown.addEventListener('click', function () {
-                var auxText = document.getElementById('scrolldowntothis');
-                auxText.scrollIntoView({ behavior: 'smooth' });
-            });
         });
     </script>
 

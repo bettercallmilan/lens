@@ -7,16 +7,14 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Milan's Lens: Portfolio</title>
     <link rel="icon" type="image/x-icon" href="../images/logo_transparent.ico">
-    <meta name="description" content="Explore Milan's Lens Portfolio showcasing a diverse collection of photography. From mesmerizing landscapes and vibrant sunsets to intimate portraits of cats and captivating automotive photography.">
-    <meta name="keywords" content="landscape photography, sunset photos, nature landscapes, cat photography, automotive photography, visual storytelling">
+    <meta name="description"
+        content="Explore Milan's Lens Portfolio showcasing a diverse collection of photography. From mesmerizing landscapes and vibrant sunsets to intimate portraits of cats and captivating automotive photography.">
+    <meta name="keywords"
+        content="landscape photography, sunset photos, nature landscapes, cat photography, automotive photography, visual storytelling">
     <meta name="author" content="Milan Jankovic">
 </head>
 
 <body class="subpage-body">
-    <header>
-        <img id="logo" src="../images/logo_transparent.png" alt="Logo">
-        <div class="milanslens">Milan's Lens</div>
-    </header>
     <div class="navbar-container">
         <nav class="navbar">
             <button class="navbar-toggle" id="navbar-toggle">
@@ -33,36 +31,10 @@
     </div>
 
     <main>
-        <h1 class="submain-text">Portfolio</h1>
-        <p class="aux-text" id="aux-text1">In my portfolio, I capture a diverse range of subjects through my lens. From
-            vibrant sunsets painting the sky to serene lakes reflecting nature's beauty, each photo tells a unique
-            story. I explore expansive landscapes, showcasing nature's grandeur, and seek out symmetry in everyday
-            scenes.
-        </p>
-        <br>
-        <br>
-        <p class="aux-text">My photography aims to inspire wonder and appreciation for both natural and man-made
-            marvels. Whether it's the soft glow of a sunset or the sleek lines of an automobile, each image reflects my
-            dedication to capturing beauty. I also delve into pet photography, capturing the playful spirit and charm of
-            cats.
-        </p>
-        <br>
-        <br>
-        <p class="aux-text">Additionally, I specialize in automotive photography, highlighting the elegance and power of
-            modern design. Through my work, I invite you to explore these visual narratives, each one capturing moments
-            filled with beauty and emotion."</p>
-        <br>
-        <br>
-        <br>
-
+        <h1 id="main-text">Portfolio</h1>
+        <h2 id="h2">capturing moments</h2>
         <div class="scroll-down"></div>
     </main>
-
-    <aside class="aside">
-        <p class="quote">“The best thing about a picture is that it never changes, even when the people in
-            it do.”</p>
-        <p>- Andy Warhol</p>
-    </aside>
 
     <div class="gallery" id="scrolldowntothis">
         <div class="gallery-item">
@@ -115,21 +87,20 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <p>Jankovic Milan © 2024</p>
-            <img id="upbutton" src="../images/up.png" alt="Up Button">
+    <div id="galleryModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <button class="prev">❮</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <button class="next">❯</button>
         </div>
-    </footer>
+        <div id="caption"></div>
+    </div>
 
     <script>
         document.getElementById('navbar-toggle').addEventListener('click', function () {
             var navbarLinks = document.getElementById('navbar-links');
             navbarLinks.classList.toggle('active');
-        });
-
-        document.getElementById('upbutton').addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -139,6 +110,68 @@
                 auxText.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const modal = document.getElementById('galleryModal');
+        const modalImg = document.getElementById('modalImage');
+        const captionText = document.getElementById('caption');
+        const closeBtn = document.querySelector('.close');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentIndex = 0;
+
+        function openModal() {
+            modal.style.display = 'block';
+            document.addEventListener('keydown', handleKeydown);
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.removeEventListener('keydown', handleKeydown);
+        }
+
+        function showImage(index) {
+            const img = galleryItems[index];
+            const title = img.parentElement.querySelector('.image-title').innerText;
+            modalImg.src = img.src;
+            captionText.innerText = title;
+            currentIndex = index;
+        }
+
+        galleryItems.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                openModal();
+                showImage(index);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? galleryItems.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === galleryItems.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        function handleKeydown(e) {
+            if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex === galleryItems.length - 1) ? 0 : currentIndex + 1;
+                showImage(currentIndex);
+            } else if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex === 0) ? galleryItems.length - 1 : currentIndex - 1;
+                showImage(currentIndex);
+            } else if (e.key === 'Escape') {
+                closeModal();
+            }
+        }
     </script>
 
 </body>
