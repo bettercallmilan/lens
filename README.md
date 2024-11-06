@@ -8,7 +8,6 @@ Welcome to Milan's Lens, a personal photography portfolio website. This site sho
 - [Features](#features)
 - [Usage](#usage)
 - [License](#license)
-- [Contact](#contact)
 
 ## Project Overview
 
@@ -31,18 +30,7 @@ Navigate through the different sections using the navigation bar:
 - **Portfolio**: View photography projects.
 - **Equipment**: Learn about the equipment used.
 - **About Me**: Get to know more about the photographer.
-- **Contact**: Send inquiries or collaboration requests through the contact form.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-## Contact
-
-For any inquiries or collaboration requests, please contact me at:
-
-- **Email**: [contact@jankovic.tech](mailto:contact@jankovic.tech)
-- **Website**: [Milan's Lens](https://lens.jankovic.tech)
-- **Main Website**: [Jankovic Tech](https://jankovic.tech)
-
-Thank you for visiting Milan's Lens!
